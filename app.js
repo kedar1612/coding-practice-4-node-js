@@ -12,7 +12,7 @@ let database = null
 const initializeDbAndServer = async() =>{
     try{
         database = await open ({
-            fileName:databasePath
+            fileName:databasePath,
             driver: sqlite3.Database
         });
          app.listen(3000, () => {
@@ -29,10 +29,10 @@ initializeDbAndServer();
 
 const convertDbObjectToResponseObject =(dbObject) =>{
     return{
-        playerId:dbObject.player_id;
-        playerName:dbObject.player_name;
-        jerseyNumber:dbObject.jersey_number;
-        role:dbObject.role;
+        playerId:dbObject.player_id,
+        playerName:dbObject.player_name,
+        jerseyNumber:dbObject.jersey_number,
+        role:dbObject.role,
     };
 };
 
